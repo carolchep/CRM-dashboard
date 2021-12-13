@@ -72,22 +72,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mul1.wsgi.application'
 
-
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
+    }
+}
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+#DATABASES = {
+   # 'default': {
+       
+    # 'ENGINE': 'django.db.backends.postgresql',
         #'ENGINE': 'django.db.backends.postgresql_psycopg2'
-        'NAME':'DEMO_TEST',
-        'USER':'postgres',
-        'PASSWORD':'0711344457',
-        'HOST':'localhost',
-        'PORT':'5432'
+       # 'NAME':'DEMO_TEST',
+       # 'USER':'postgres',
+        #'PASSWORD':'0711344457',
+        #  'PORT':'5432'
 
-    }
-}
+   # }
+#}
 
 
 # Password validation
